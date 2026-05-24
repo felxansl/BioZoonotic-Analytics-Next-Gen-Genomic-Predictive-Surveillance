@@ -82,6 +82,7 @@ app = dash.Dash(
         {"name": "description", "content": "Zoonotic Disease Surveillance Portal"},
     ],
 )
+server = app.server
 
 app.title = "ZDSPMP v5.1 - Academic Epidemiology"
 
@@ -1616,4 +1617,5 @@ def update_dashboard(selected_disease):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8050)
+    port = int(os.environ.get("PORT", 8050))
+    app.run(debug=False, host="0.0.0.0", port=port)

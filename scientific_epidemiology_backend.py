@@ -8,8 +8,7 @@ Rigorous implementation of zoonotic disease surveillance with:
 - Wastewater viral load monitoring
 - Bayesian parameter estimation with PyMC
 
-Author: Scientific Epidemiology Lab
-Institution: Computational Virology & Spatial Epidemiology Research Network
+Author: Felix Loaiza
 Copyright (c) 2026. All rights reserved.
 """
 

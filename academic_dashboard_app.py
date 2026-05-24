@@ -1400,7 +1400,7 @@ app.layout = html.Div([
             # Copyright and authorship
             html.Div([
                 html.Span("© 2026 ", style={"color": "#9ca3af"}),
-                html.Span("Félix Sánchez Loaiza", style={
+                html.Span("Felix Loaiza", style={
                     "color": "#e0e7ff", "fontWeight": "700", "fontFamily": "var(--font-mono)"
                 }),
                 html.Span(". All rights reserved.", style={"color": "#9ca3af"}),

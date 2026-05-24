@@ -10,8 +10,7 @@ Rigorous zoonotic disease surveillance interface with:
 - Environmental forcing variables
 - FULL Ebola Virus Disease integration (BDBV/EBOV)
 
-Institution: Computational Virology & Spatial Epidemiology Lab (CVSEL)
-Author: Scientific Epidemiology Research Network
+Author: Felix Loaiza
 Copyright (c) 2026. All rights reserved.
 """
 
@@ -27,12 +26,7 @@ from dash import dcc, html, Input, Output, State, callback
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-# =============================================================================
-# CORRECCIÓN A — Conectar al backend epidemiológico real
-# =============================================================================
-# Import the real SEIR engine from the backend module.
-# If the module is in the same directory, sys.path already covers it.
-# If not, adjust the path below to the actual backend location.
+
 _BACKEND_DIR = os.path.dirname(os.path.abspath(__file__))
 if _BACKEND_DIR not in sys.path:
     sys.path.insert(0, _BACKEND_DIR)
@@ -1400,7 +1394,7 @@ app.layout = html.Div([
             # Copyright and authorship
             html.Div([
                 html.Span("© 2026 ", style={"color": "#9ca3af"}),
-                html.Span("Felix Loaiza", style={
+                html.Span("Félix Sánchez Loaiza", style={
                     "color": "#e0e7ff", "fontWeight": "700", "fontFamily": "var(--font-mono)"
                 }),
                 html.Span(". All rights reserved.", style={"color": "#9ca3af"}),
@@ -1591,7 +1585,7 @@ def update_dashboard(selected_disease):
 
         html.Div([
             html.Div("Units", className="metric-label"),
-            html.Div("copias genómicas / L (log₁₀)", className="metric-value"),
+            html.Div("genomic copies / L (log₁₀)", className="metric-value"),
         ], className="metric-row"),
 
         html.Div([
@@ -1601,7 +1595,7 @@ def update_dashboard(selected_disease):
 
         html.Div([
             html.Div("PMMoV control", className="metric-label"),
-            html.Div("Abundancia relativa ≈ 1.00 (corrección estándar)", className="metric-value",
+            html.Div("Relative abundance ≈ 1.00 (standard correction)", className="metric-value",
                      style={"fontSize": "11px", "color": "var(--text-secondary)"}),
         ], className="metric-row"),
     ])

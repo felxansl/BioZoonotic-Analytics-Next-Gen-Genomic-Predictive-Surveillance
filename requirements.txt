@@ -3,3 +3,4 @@ plotly==6.7.0
 numpy==2.4.6
 pandas==3.0.3
 requests==2.34.2
+gunicorn==26.0.0
